@@ -1,8 +1,7 @@
-import type { RouteRecordRaw, NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
-import { createRouter, createWebHistory } from 'vue-router'
-import DefaultLayout from '../layouts/DefaultLayout.vue'
-import AdminLayout from '../layouts/AdminLayout.vue'
-import MerchantLayout from '../layouts/MerchantLayout.vue'
+import { createRouter, createWebHistory, type RouteRecordRaw, type NavigationGuardNext, type RouteLocationNormalized } from 'vue-router'
+import DefaultLayout from '../layouts/default-layout.vue'
+import AdminLayout from '../layouts/admin-layout.vue'
+import MerchantLayout from '../layouts/merchant-layout.vue'
 
 // Dynamic routes configuration
 const modules = import.meta.glob('../views/**/*.vue')
@@ -16,12 +15,12 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'index',
-        component: () => import('../views/default/Index.vue')
+        component: () => import('../views/default/index.vue')
       },
       {
-        path: 'home',
-        name: 'home',
-        component: () => import('../views/default/Home.vue')
+        path: 'about',
+        name: 'about',
+        component: () => import('../views/default/home/about.vue')
       }
     ]
   },
@@ -32,7 +31,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'admin-dashboard',
-        component: () => import('../views/admin/Dashboard.vue')
+        component: () => import('../views/admin/dashboard.vue')
       }
     ]
   },
@@ -43,7 +42,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'merchant-products',
-        component: () => import('../views/merchant/Products.vue')
+        component: () => import('../views/merchant/products.vue')
       }
     ]
   }

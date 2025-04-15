@@ -25,7 +25,16 @@ import {
   faBars,
   faShoppingCart,
   faHeart,
-  faStar
+  faStar,
+  faStore,
+  faUserShield,
+  faInfoCircle,
+  faBookmark,
+  faCode,
+  faPaintBrush,
+  faLaptopCode,
+  faUsers,
+  faSync
 } from '@fortawesome/free-solid-svg-icons'
 
 // Add icons to the library
@@ -54,7 +63,16 @@ library.add(
   faBars,
   faShoppingCart,
   faHeart,
-  faStar
+  faStar,
+  faStore,
+  faUserShield,
+  faInfoCircle,
+  faBookmark,
+  faCode,
+  faPaintBrush,
+  faLaptopCode,
+  faUsers,
+  faSync
 )
 
 export { FontAwesomeIcon }
